@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ajayverma26.com.forsoni.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="ajayverma26.com.forsoni.MapsActivity" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Radius:-"
+                android:textAllCaps="true"
+                android:textColor="#e20606"
+                android:textStyle="bold"
+                android:layout_gravity="bottom|end"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|end"
+                app:dsb_min="10"
+                app:dsb_max="100"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:id="@+id/fabOkClick"
+
+            android:layout_marginTop="28dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
